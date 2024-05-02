@@ -1,5 +1,5 @@
 # conda env create -f environment.yml
-name: pylidar-tls-canopy
+name: base
 channels:
   - conda-forge
 dependencies:
@@ -19,8 +19,9 @@ dependencies:
   - cxx-compiler
   - pip
   - pip:
+    - /usr/local/rdblib-2.4.1-x86_64-linux/interface/python/riegl.rdb-2.4.1-cp34.cp35.cp36.cp37.cp38.cp39.cp310-none-linux_x86_64.whl
     - -e .
 variables:
-  RIVLIB_ROOT: /gpfs/data1/vclgp/software/rivlib-2_6_0-x86_64-linux-gcc9
-  RDBLIB_ROOT: /gpfs/data1/vclgp/software/rdblib-2.4.0-x86_64-linux
+  RIVLIB_ROOT: /usr/local/rivlib-2_6_0-x86_64-linux-gcc9
+  RDBLIB_ROOT: /usr/local/rdblib-2.4.1-x86_64-linux
   PYLIDAR_CXX_FLAGS: -std=c++11 
